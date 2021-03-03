@@ -1,0 +1,8 @@
+type Weather @model {
+  id: ID!
+  city: String!
+  lastUpdate: String!
+  temperature: String!
+  cloudStatus: String!
+  rainProbability: Int!
+}
