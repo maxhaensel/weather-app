@@ -12,11 +12,13 @@ interface Props extends CityData {}
 
 const ReturnLogo = (item: string): React.FunctionComponent<React.SVGProps<SVGSVGElement>> => {
 	switch (item) {
-		case 'Sonnig':
+		case 'Clear':
 			return Icons['Sun']
-		case 'Bewölkt':
+		case 'Clouds':
+			return Icons['Cloud']
+		case 'Rain':
 			return Icons['Rain']
-		case 'Gewitter':
+		case 'Mist':
 			return Icons['Thunderstorm']
 		default:
 			return Icons['Sun']
@@ -27,13 +29,13 @@ const WeatherCard = ({ city, lastUpdate, temperature, cloudStatus, rainProbabili
 	const Logo = ReturnLogo(cloudStatus)
 	return (
 		<div className="bg-gray-100 pt-4 px-4 pb-12  ">
-			<h1 className="text-center w-full text-xl py-4">{city}</h1>
+			<h1 className="text-center w-full text-2xl py-4">{city}</h1>
 			<div className="grid grid-flow-row grid-cols-2 items-center">
 				<div>
 					<Logo className="w-full h-full p-6" />
 				</div>
 				<div className="flex flex-col font-thin text-gray-600">
-					<span className="underline pb-4">{lastUpdate}</span>
+					<span className="underline pb-4 text-xl">{lastUpdate}</span>
 					<span>{temperature}</span>
 					<span>{cloudStatus}</span>
 					<span>{rainProbability}% Regen</span>

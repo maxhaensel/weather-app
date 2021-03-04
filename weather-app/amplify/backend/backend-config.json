@@ -24,10 +24,11 @@
 		}
 	},
 	"function": {
-		"calculateWeatherData": {
-			"service": "Lambda",
+		"weatherCron": {
+			"build": true,
 			"providerPlugin": "awscloudformation",
-			"build": true
+			"service": "Lambda",
+			"dependsOn": []
 		}
 	}
 }
