@@ -69,7 +69,7 @@
 				"Timeout": "25",
 				"Code": {
 					"S3Bucket": "amplify-weather-app-productive-204156-deployment",
-					"S3Key": "amplify-builds/weatherCron-446f7832314834324465-build.zip"
+					"S3Key": "amplify-builds/weatherCron-6e74776c763175727159-build.zip"
 				}
 			}
 		},
